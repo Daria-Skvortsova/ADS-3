@@ -4,7 +4,7 @@ int cbinsearch(int *arr, int size, int value) {
   int otvet, ceredina;
   int granica_1 = 0;
   int granica_2 = size-1;
-  while (granica_1 <= granica_2){
+  while (granica_1 <= granica_2) {
     ceredina = granica_1 + ((granica_2 - granica_1)/2);
     otvet = 0;
     if (arr[ceredina] == value) {
@@ -20,17 +20,16 @@ int cbinsearch(int *arr, int size, int value) {
           break;
         }
       }
-	  break;
-	} else if (arr[ceredina] > value) {
-      granica_2 = ceredina - 1;	
+          break;
+        } else if (arr[ceredina] > value) {
+      granica_2 = ceredina - 1;
       } else {
         granica_1 = ceredina + 1;
-	    }
+        }
   }
   if (otvet == 0) {
     return 0;
-  }
-  else {
-      return otvet;
-  }
+  } else {
+    return otvet;
+    }
 }
